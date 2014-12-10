@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+  <script src="//rawgithub.com/jsoma/tabletop/master/src/tabletop.js"></script>
+  <script src="{{ "/build/js.min.js" | prepend: site.baseurl }}"></script>
+  </body>
+
+</html>
