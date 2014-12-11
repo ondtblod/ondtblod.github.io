@@ -10,7 +10,7 @@ permalink: "/brew/:year/:month/:day/:title.html"
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-exclude: [node_modules, package.json]
+exclude: [node_modules, package.json, bower_components]
 
 # Build settings
 markdown: kramdown

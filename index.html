@@ -1,22 +1,20 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Brews</h1>
-
-  <ul class="post-list">
+  <h1 class="page-title">Brews</h1>
+  <div class="post-list">
     {% for post in site.posts %}
-      <li>
+      <div class="jumbotron">
+          <h1>{{ post.title }}</h1>
+          <p>{{post.content}}</p>
+          <p><a class="btn btn-primary btn-lg" href="{{ post.url | prepend: site.baseurl }}">Learn more</a></p>
+      </div>
+      <!--<li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-      </li>
+      </li>-->
     {% endfor %}
-  </ul>
-
-
-</div>
+  </div>

@@ -5,6 +5,8 @@ var livereload = require('gulp-livereload');
 var fs = require('fs');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
+var streamify = require('gulp-streamify');
 
 gulp.task('scss', function() {
   gulp.src('_sass/style.scss')
@@ -23,6 +25,7 @@ gulp.task('scripts', function() {
   browserify('./js/main.js', {debug: true})
     .bundle()
     .pipe(source('js.min.js'))
+    .pipe(streamify(uglify()))
     .pipe(gulp.dest('./build'));
 });
 
