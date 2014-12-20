@@ -25,9 +25,9 @@ gulp.task('scripts', function() {
   browserify('./js/main.js', {debug: true})
     .bundle()
     .pipe(source('js.min.js'))
-    .pipe(streamify(uglify({
-      mangle: false
-    })))
+    //.pipe(streamify(uglify({
+    //  mangle: false
+    //})))
     .pipe(gulp.dest('./build'));
 });
 
