@@ -73,13 +73,23 @@ var init = function(data, id, name) {
 
 function getDataAndRender(winDoc, id, doc) {
   document = winDoc;
-  Tabletop.init({
-    key: doc.doc,
-    callback: function(d) {
-      init(d, id, doc.name);
-    },
-    simpleSheet: true
-  });
+  if (!doc.json) {
+    Tabletop.init({
+      key: doc.doc,
+      callback: function(d) {
+        init(d, id, doc.name);
+      },
+      simpleSheet: true
+    });
+  }
+  else {
+    $.ajax({
+      url: '/json/' + doc.doc + '.json',
+      success: function(d) {
+        init(d, id, doc.name);
+      }
+    });
+  }
   var wrapEl = document.createElement('div');
   wrapEl.className = 'chart-wrapper col-xs-12 col-md-4 col';
   wrapEl.innerHTML += '<div id="chartwrapper-' + id + '" class="inner"><ul class="nav nav-tabs"><li class="active"><a href="#" data-toggle="tab1">Info</a></li><li class=""><a href="#" data-toggle="tab2">Graph</a></li></ul><h3 class="graph-title">' + doc.name + '</h3></div>';
