@@ -92,7 +92,7 @@ function getDataAndRender(winDoc, id, doc) {
   }
   var wrapEl = document.createElement('div');
   wrapEl.className = 'chart-wrapper col-xs-12 col-md-4 col';
-  wrapEl.innerHTML += '<div id="chartwrapper-' + id + '" class="inner"><ul class="nav nav-tabs"><li class="active"><a href="#" data-toggle="tab1">Info</a></li><li class=""><a href="#" data-toggle="tab2">Graph</a></li></ul><h3 class="graph-title">' + doc.name + '</h3></div>';
+  wrapEl.innerHTML += '<div id="chartwrapper-' + id + '" class="inner"><ul class="nav nav-tabs"><li class="active"><a href="javascript:;" data-toggle="tab1">Info</a></li><li class=""><a href="javascript:;" data-toggle="tab2">Graph</a></li></ul><h3 class="graph-title">' + doc.name + '</h3></div>';
   document.getElementById('main').appendChild(wrapEl);
 
   var newEl = document.getElementById('chartwrapper-' + id);

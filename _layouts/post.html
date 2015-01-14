@@ -8,7 +8,8 @@ layout: default
     {% for sheet in page.sheets %}
     sheets.{{ sheet[0] }} = {
       name: '{{ sheet[1].name }}',
-      doc: '{{ sheet[1].doc }}'
+      doc: '{{ sheet[1].doc }}',
+      json: '{{ sheet[1].json }}'
     };
     {% endfor %}
   </script>
