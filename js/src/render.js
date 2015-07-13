@@ -17,10 +17,11 @@ var init = function(data, id, name) {
   var highestX = 0;
   var lastY = 0;
   var lastX = 0;
+  console.log(data)
 
   for (var i = 0, len = data.length; i < len; i++) {
     var row = data[i];
-    if (i % 10 !== 0) {
+    if (i % 1 !== 0) {
       continue;
     }
     d.push({

@@ -19,6 +19,6 @@ var s = require('simple-jekyll-search/src');
 SimpleJekyllSearch.init({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('autocomplete-results'),
-  dataSource: '/search.json',
-})
+  dataSource: '/search.json'
+});
 require('./vendor/bootstrap/collapse');
