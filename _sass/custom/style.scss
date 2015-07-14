@@ -1,0 +1,33 @@
+.legend-container {
+  position: absolute;
+}
+.chart-wrapper {
+  position: relative;
+  margin-bottom: 2em;
+}
+.chart-wrapper .inner {
+  background: #fff;
+  border-radius: 4px 4px 0 0;
+}
+.chart-wrapper .inner ul {
+  border-radius: 4px 4px 0 0;
+}
+.chart-wrapper .graph-title,
+.chart-wrapper .tab1 {
+  padding: 10px 10px;
+}
+.chart-wrapper .form-group {
+  position: absolute;
+  right: 15px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #555 !important;
+  cursor: default;
+  background-color: #fff !important;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent !important;
+}
+.loading {
+  width: 100%;
+  text-align: center;
+}

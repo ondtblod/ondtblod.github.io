@@ -21,4 +21,4 @@ SimpleJekyllSearch.init({
   resultsContainer: document.getElementById('autocomplete-results'),
   dataSource: '/search.json'
 });
-require('./vendor/bootstrap/collapse');
+require('bootstrap-sass/assets/javascripts/bootstrap/collapse');

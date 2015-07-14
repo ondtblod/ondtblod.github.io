@@ -13,9 +13,8 @@ gulp.task('scss', function() {
     .pipe(sass({
       outputStyle: 'compressed',
       errLogToConsole: true,
-      error: function(err) {
-        console.log(err);
-      }
+      error: sass.logError,
+      includePaths: './node_modules/bootstrap-sass/assets/stylesheets'
     }))
     .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
     .pipe(gulp.dest('./css'));

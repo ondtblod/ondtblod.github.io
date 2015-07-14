@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/ondtblod/ondtblod.github.io",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.5",
     "brew-yml-to-html": "^1.2.0",
     "browserify": "^10.2.6",
     "browserify-shim": "^3.8.9",
