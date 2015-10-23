@@ -1,0 +1,19 @@
+@import url('//fonts.googleapis.com/css?family=Playfair+Display+SC:400italic,700,900|Raleway:500|Martel+Sans:400,700');
+.post-list {
+  h1 {
+    font-family: $font-family-serif;
+  }
+  .list-beer {
+    padding: 10px;
+  }
+  .beer-inner {
+    opacity: .75;
+    border: 1px $gray-lighter solid;
+    transition: all .3s ease-in;
+    padding: 5px;
+    &:hover {
+      opacity: 1;
+      border: 1px $brand-primary solid;
+    }
+  }
+}

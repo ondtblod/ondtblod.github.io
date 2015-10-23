@@ -3,19 +3,21 @@ layout: default
 ---
 <div class="post-list">
   {% for post in site.posts %}
-    <div class="col-md-4">
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        <h1>{{ post.title }}</h1>
-      </a>
-      <p>{{post.content}}</p>
-      <h6>Charts</h6>
-      {% for sheet in post.sheets %}
-        <span class="label label-info">{{ sheet[1].name }}</span>
-      {% endfor %}
-      <h6>Tags</h6>
-      {% for tag in post.tags %}
-        <span class="label label-success">{{ tag }}</span>
-      {% endfor %}
+    <div class="col-md-4 list-beer">
+      <article class="beer-inner">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <h1>{{ post.title }}</h1>
+        </a>
+        <p>{{post.content}}</p>
+        <h6>Charts</h6>
+        {% for sheet in post.sheets %}
+          <span class="label label-info">{{ sheet[1].name }}</span>
+        {% endfor %}
+        <h6>Tags</h6>
+        {% for tag in post.tags %}
+          <span class="label label-success">{{ tag }}</span>
+        {% endfor %}
+      </article>
     </div>
   {% endfor %}
 </div>
