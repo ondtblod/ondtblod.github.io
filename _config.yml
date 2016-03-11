@@ -10,3 +10,47 @@ exclude: [node_modules, package.json, bower_components]
 
 # Build settings
 markdown: kramdown
+# Prose
+prose:
+  rooturl: '_posts'
+  #relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  media: 'media'
+  metadata:
+    _posts:
+      - name: "date"
+        field:
+          element: "hidden"
+          value: "CURRENT_DATETIME"
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: published
+        field:
+          element: checkbox
+          label: Published
+          value: true
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
